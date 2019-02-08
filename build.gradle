@@ -9,6 +9,7 @@ plugins {
 apply plugin: 'kotlin-jpa'
 apply plugin: 'io.spring.dependency-management'
 apply plugin: 'idea'
+apply plugin: 'kotlin-allopen'
 
 group = 'nz.zoltan'
 version = '0.0.1-SNAPSHOT'
@@ -47,6 +48,10 @@ compileTestKotlin {
         freeCompilerArgs = ['-Xjsr305=strict']
         jvmTarget = '1.8'
     }
+}
+
+allOpen {
+    annotation("javax.persistence.Entity")
 }
 
 idea {
