@@ -15,7 +15,7 @@ class Article(
         var slug: String = title.toSlug(),
         var addedAt: LocalDateTime = LocalDateTime.now(),
         @Id @GeneratedValue var id: Long? = null
-        )
+)
 
 @Entity
 class User(
