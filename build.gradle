@@ -10,6 +10,7 @@ apply plugin: 'kotlin-jpa'
 apply plugin: 'io.spring.dependency-management'
 apply plugin: 'idea'
 apply plugin: 'kotlin-allopen'
+apply plugin: 'kotlin-kapt'
 
 group = 'nz.zoltan'
 version = '0.0.1-SNAPSHOT'
@@ -34,6 +35,7 @@ dependencies {
     }
     testImplementation 'org.junit.jupiter:junit-jupiter-api'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+    kapt("org.springframework.boot:spring-boot-configuration-processor")
 }
 
 compileKotlin {
