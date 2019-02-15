@@ -9,9 +9,9 @@ import org.springframework.data.repository.findByIdOrNull
 
 @DataJpaTest
 class RepositoriesTests @Autowired constructor(
-        val entityManager: TestEntityManager,
-        val userRepository: UserRepository,
-        val articleRepository: ArticleRepository
+    val entityManager: TestEntityManager,
+    val userRepository: UserRepository,
+    val articleRepository: ArticleRepository
 ) {
 
     @Test
